@@ -38,8 +38,7 @@ func main() {
 
 		fmt.Println("how many ticket you wanna book")
 		fmt.Scan(&userTickets)
-		remainingTickets = remainingTickets - userTickets
-		fmt.Printf("Tickets remaining is now  types %v \n", remainingTickets)
+		fmt.Printf("Tickets remaining is now %v \n", remainingTickets)
 
 		// CREATE ARRARY
 		// var firstName string
@@ -71,9 +70,11 @@ func main() {
 		fmt.Printf("The whole array %v\n", firstNames)
 
 		if userTickets > remainingTickets {
-			fmt.println("we only have %v tickets remaining", remainingTickets)
-			break
+			fmt.Printf("we only have %v tickets remaining\n", remainingTickets)
+			continue
 		}
+
+		remainingTickets = remainingTickets - userTickets
 
 		var noTicketRemaining bool = remainingTickets == 0
 		if noTicketRemaining {
