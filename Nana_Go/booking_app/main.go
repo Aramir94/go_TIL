@@ -70,5 +70,15 @@ func main() {
 		}
 		fmt.Printf("The whole array %v\n", firstNames)
 
+		if userTickets > remainingTickets {
+			fmt.println("we only have %v tickets remaining", remainingTickets)
+			break
+		}
+
+		var noTicketRemaining bool = remainingTickets == 0
+		if noTicketRemaining {
+			fmt.Println("Sorry we are sold out")
+			break
+		}
 	}
 }
