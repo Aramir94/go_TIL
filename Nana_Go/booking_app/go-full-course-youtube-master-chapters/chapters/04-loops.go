@@ -45,6 +45,8 @@ func main() {
 		for _, booking := range bookings {
 			var names = strings.Fields(booking)
 			firstNames = append(firstNames, names[0])
+		 	fmt.Printf("typeof names %t\n", names)
+			fmt.Printf("%v", names)
 		}
 		fmt.Printf("The first names %v\n", firstNames)
 	}

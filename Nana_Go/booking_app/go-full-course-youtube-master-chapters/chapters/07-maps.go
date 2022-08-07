@@ -12,6 +12,8 @@ var remainingTickets uint = 50
 var conferenceName = "Go Conference"
 var bookings = make([]map[string]string, 0)
 
+// fmt.Printf("%v", bookings)
+
 func main() {
 
 	greetUsers()
