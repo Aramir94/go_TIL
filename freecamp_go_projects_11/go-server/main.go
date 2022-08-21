@@ -1,4 +1,4 @@
-package main
+package main // start with package main
 
 import (
 	"fmt"
@@ -8,7 +8,7 @@ import (
 
 func formHandler(w http.ResponseWriter, r *http.Request) {
 	if err := r.ParseForm(); err != nil {
-		fmt.Fprint(w, "ParseForm() err: %v\n", err)
+		fmt.Fprintf(w, "ParseForm() err: %v\n", err)
 		return
 	}
 	fmt.Fprintf(w, "POST request sucessful\n")
@@ -30,8 +30,9 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(w, "Hello, World!")
 }
 
+// golang start
 func main() {
-	fileserver := http.FileServer(http.Dir("./static"))
+	fileserver := http.FileServer(http.Dir("./static")) //server module from http package
 	http.Handle("/", fileserver)
 	http.HandleFunc("/form", formHandler)
 	http.HandleFunc("/hello", helloHandler)
