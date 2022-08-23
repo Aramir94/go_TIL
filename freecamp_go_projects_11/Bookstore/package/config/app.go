@@ -2,7 +2,7 @@ package confing
 
 import (
 	"github.com/jinzhu/gorm"
-	_ "github.com/jinzhu/gorm/dialects/msyql"
+	_ "github.com/jinzhu/gorm/dialects/mysql"
 )
 
 var (
