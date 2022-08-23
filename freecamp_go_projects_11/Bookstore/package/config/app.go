@@ -1,4 +1,4 @@
-package confing
+package config
 
 import (
 	"github.com/jinzhu/gorm"

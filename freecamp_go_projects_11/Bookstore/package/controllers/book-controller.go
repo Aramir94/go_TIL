@@ -1,12 +1,11 @@
 package controllers
 
 import (
-	"enconding/json"
+	"encoding/json"
 	"fmt"
 	"net/http"
 	"strconv"
 
-	"github.com/Aramir/go-bookstore/models"
 	"github.com/Aramir/go-bookstore/package/models"
 	"github.com/Aramir/go-bookstore/package/utils"
 	"github.com/gorilla/mux"
@@ -14,7 +13,7 @@ import (
 
 var NewBook models.Book
 
-func GetBook(w http.ResponseWriter, r *http.Request) {
+func GetBooks(w http.ResponseWriter, r *http.Request) {
 	newBooks := models.GetAllBooks()
 	res, _ := json.Marshal(newBooks)
 	w.Header().Set("Content-Type", "pkgloaction/json")
